@@ -251,5 +251,119 @@ h1{
   --cor-principal: #0B0D20;
   --cor-secundaria: #212333;
   --cor-destaque: #2BDEFD;
+    // código omitido
+
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+    mostraAlternativas();
+}
+
+// código omitido
+    // código omitido
+
+function mostraPergunta() {
+    if (atual >= perguntas.length) {
+        mostraResultado();
+        return;
+    }
+    perguntaAtual = perguntas[atual];
+    caixaPerguntas.textContent = perguntaAtual.enunciado;
+     caixaAlternativas.textContent = "";
+    mostraAlternativas();
+}
+
+// código omitido
+    // código omitido
+
+function mostraResultado() {
+    textoPergunta.textContent = "Em 2049…";
+}
+
+// código omitido
+    // código omitido
+
+function mostraResultado() {
+    caixaPerguntas.textContent = "Em 2049...";
+    textoResultado.textContent = historiaFinal;
+    caixaAlternativas.textContent = "";
+}
+
+// código omitido
+    // código omitido
+
+function respostaSelecionada(opcaoSelecionada) {
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historia += afirmacoes + "";
+    atual++;
+    mostraPergunta();
+}
+
+// código omitido
+    127.0.0.1:5500
+    
   --cor-texto: #D7F9FF;
 }
+button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+}
+button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-principal);
+}
+button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto);
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+button {
+  background-color: var(--cor-principal);
+  color: var(--cor-destaque);
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-secundaria);
+}
+const perguntas = [
+    {
+        enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia, um chat que consegue responder todas as dúvidas que uma pessoa pode ter, ele também gera imagens e áudios hiper-realistas. Qual o primeiro pensamento?",
+        alternativas: [
+            {
+                texto: "Isso é assustador!",
+                afirmacao: "No início ficou com medo do que essa tecnologia pode fazer. "
+            },
+            {
+                texto: "Isso é maravilhoso!",
+                afirmacao: "Quis saber como usar IA no seu dia a dia."
+            }
+        ]
+    },
+    // código omitido…
+];
+// Trecho ilustrativo do arquivo script.js
+enunciado: "Assim que saiu da escola você se depara com uma nova tecnologia...",
+alternativas: [
+  {
+    texto: "Isso é assustador!",
+    afirmacao: "No início ficou com medo do que essa tecnologia pode fazer."
+  },
+  {
+    texto: "Isso é maravilhoso!",
+    afirmacao: "Quis saber como usar IA no seu dia a dia."
+  }
+]
